@@ -1,0 +1,146 @@
+.cards__Offers {
+  padding: 2rem 0;
+
+}
+
+.cards__Offers h1 {
+  text-align: center;
+  color:  #003366;
+  font-size: 50px;
+  margin-top: 50px;
+  
+}
+
+.buttonn {
+  background: transparent;
+  border: 1px solid #003366;
+  color: #003366;
+  font-size:15px;
+  width: 20%;
+  height:10%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.buttonn:hover{
+  background-color: #003366;
+  color:white;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(14, 13, 13, 0.5);
+  opacity: 1;
+ 
+
+}
+
+.cards__Offers__item {
+  transition: transform .2s;
+}
+
+.cards__Offers__item:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); 
+}
+
+.offer{
+  text-decoration-line: line-through;
+  color:red;
+}
+
+
+.cards__Offers__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 20px;
+}
+
+.cards__Offers__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.cards__Offers__item {
+  
+  display: flex;
+  margin: 0 1rem;
+  border-radius: 10px;
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+
+
+.cards__Offers__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  border-radius: 10px;
+  text-decoration: none;
+  
+}
+
+.cards__Offers__item__link:hover {
+  box-shadow: 0 10px 20px rgba(14, 13, 13, 0.5);
+  opacity: 1;
+}
+
+.cards__Offers__item__img {
+  height: 200px;
+  object-fit: fill;
+  margin: 0;
+}
+
+.cards__Offers__item__labels {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards__Offers__item__label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #2c2f33;
+  margin: 5px;
+}
+
+.cards__Offers__item__info {
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.cards__Offers__item__title > p {
+  margin-top: 10px;
+  /* padding: 0 30px; */
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cards__Offers__item__text {
+  
+  direction: rtl;
+  color:black;
+  font-size: 15px;
+  /* line-height: 30px; */
+  font-family: 'Almarai', sans-serif;
+}
+
+.card-footer{
+  text-align: center;
+  margin-bottom: 1rem;
+  
+}
+

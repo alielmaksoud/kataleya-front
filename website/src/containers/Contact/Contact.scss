@@ -1,0 +1,21 @@
+@import '../../index.scss';
+
+.contact-container {
+  padding: 0 .5em;
+
+  .main-title{
+   color:#003366;
+  }
+
+  .title {
+    font-size: 1.1em;
+    margin-top: .8em;
+    color:#003366;
+  
+    @include mediaMd {
+      font-size: 1.2em;
+    }
+  }
+}
+
+

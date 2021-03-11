@@ -1,0 +1,283 @@
+$ff-primary: 'Poppins', sans-serif;
+
+$fw-extralight: 200;
+$fw-light: 300;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+@mixin mediaSm {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 1224px) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $ff-primary;
+  font-weight: $fw-light;
+}
+
+body {
+  width: 100%;
+}
+
+// === RESET ===
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* background-color:white; */
+  
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #003366;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.main-title {
+  font-size: 1.4em;
+  font-weight: $fw-semibold;
+
+  @include mediaMd {
+    font-size: calc(.8em + 1.3vw);
+  }
+}
+
+.main-info {
+  font-size: .9em;
+
+  @include mediaSm {
+    font-size: 1em;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity .3s ease-out;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+
+/////////// admin panel
+
+
+div.MuiButtonBase-root {
+  padding: 0px;
+}
+
+/* .MuiListItemText-root{
+  margin-bottom: 0px !important;
+} */
+
+div.MuiButtonBase-root > a {
+  width: 100%;
+  height: 35px;
+  padding-top: 10px;
+}
+
+
+
+
+ /* these webkits are for stying scroller in chrome */
+ ::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+/******************/
+
+
+
+.menu-bars {
+  margin-left: 2rem !important;
+  font-size: 1rem !important;
+  cursor: pointer;
+  border-radius: 25% !important;
+  
+}
+
+.nav-menu {
+
+  width: 250px;
+  position: absolute;
+  z-index: 10;
+  top: 30;
+  left: -100%;
+  transition: 850ms;
+  color:#003366;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+
+ 
+
+ .navbarr {
+  background-color: #d1c8bb;
+  display: flex;
+  align-items: center;
+  /* -moz-box-shadow: 1px 0 8px 0 #003366;
+  -webkit-box-shadow: 1px 0 8px 0 #003366;
+  box-shadow: 1px 0 8px 0 #003366; */
+}
+
+
+
+.nav-menu-home {
+  width: 250px;
+  position: absolute;
+  z-index: 10;
+  top: 30;
+  left:-80%;
+  transition: 850ms;
+  color:#003366;
+  height: 8vh;
+}
+
+.nav-menu-home.active {
+  left: 0;
+  transition: 350ms;
+  position: absolute;
+  z-index: 10;
+  align-items: center;
+  font-weight: bold;
+}
+
+
+
+
+
+
+.nav-menu.active {
+  height: 85vh;
+  left: 0;
+  transition: 350ms;
+  position: absolute;
+  overflow-y: scroll;
+  scrollbar-color: #003366;
+  scrollbar-width: thin;
+  z-index: 10;
+}
+
+
+.head-title {
+  padding: 2%;
+  text-align: center;
+  width: 100%;
+}
+
+
+.head-title > h4:nth-child(2) {
+  font-size: 1.1rem;
+  font-family: "Dancing Script", cursive;
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+.logoutbutton {
+  font-size: 0.9rem;
+  font-family: "Roboto" !important;
+  color: #003366 !important;
+  border-radius: 25px !important;
+  margin-right: 20px !important;
+  cursor: pointer;
+}
+
+.Link {
+  text-decoration: none;
+  color:#003366;
+  
+  
+}
+
+.nmain-color {
+  /* background-color: rgba(116, 255, 116, 0.145); */
+  width: 100%;
+  
+}
+
+.reportscon {
+  display: flex !important;
+  height: 88vh !important;
+  overflow-y: scroll !important ;
+  /* background-color: rgba(116, 255, 116, 0.145) !important; */
+  font-weight: 400 !important;
+  font-family: "Roboto", "Helvetica", "Arial", "sans-serif" !important ;
+  margin-bottom: 1rem !important;
+}
+
+.reportspaper {
+  /* background-color: rgba(116, 255, 116, 0.145) !important; */
+  padding: 20px !important;
+  position: static !important;
+  height: 115vh !important;
+  margin: 20px !important;
+}
+.menu-text{
+  color:#003366;
+}
+
+

@@ -1,0 +1,138 @@
+.navbar{
+  background-color: #d1c8bb;
+  align-items: center;
+  height: 80px;
+}
+
+  .logo {
+    width: 100px;
+  }
+  
+  .logo-mobile{
+    margin-left:30%;
+
+  }
+
+  .navbarrr {
+    font-size: 1rem !important;
+    display: flex;
+  }
+  .navbarrr li { display: inline; }
+
+  .navbarrr a {
+    color:#003366;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    
+  }
+  .navbarrr a:hover {
+   color: #ffffff;
+  }
+  
+  .ul{
+    list-style-type: none;
+  }
+  
+
+  .headerr {
+    grid-area: header;
+    color:#003366;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    
+  }
+  .headerr-links li { display: inline; }
+  
+  .headerr-links a {
+    color: #003366;
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: bold;
+  }
+  .headerr-links a:hover {
+    color: #ffffff;
+  }
+  
+  .navbar-mobile {
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+/*     position: fixed; */
+    width: 100%;
+    top: 0;
+    z-index: 999;
+  }
+  
+  
+    .nav-menu-mobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    .nav-menu-mobile.active {
+      background: lightgray;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+  
+    .nav-links-mobile {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+      color: #003366;
+    }
+  
+    .nav-links-mobile:hover {
+      background-color: #fff;
+      color:  white;
+      border-radius: 0;
+    }
+  
+    .menu-icon-mobile {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #003366;
+    }
+  
+    .fa-times {
+      color: #003366;
+      font-size: 2rem;
+    }
+  
+    .nav-links-mobiles {
+      display: block;
+      text-align: center;
+      margin: 1rem auto;
+      border-radius: 10px;
+      width: 80%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      background-color: transparent;
+      color: #003366;
+      padding: 14px 20px;
+      transition: all 0.3s ease-out;
+    }
+  
+    .nav-links-mobiles:hover {
+      color:white;
+    }
+    ul {
+        list-style-type: none;
+    }

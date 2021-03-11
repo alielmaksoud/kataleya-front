@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+  }
+ 
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 15px;
+  }
+  .flex-item-first{
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+    margin:10px;
+    border-radius: 15px;
+ 
+  }
+  
+  .flex-item-second {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+    margin:10px;
+    border-radius: 15px;
+  }
+  
+  .flex-item-third {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+    margin:10px;
+    border-radius: 15px;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+
+
+  .button-profile:hover{
+    color:white;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+    box-shadow: 0 10px 20px rgba(14, 13, 13, 0.5);
+    opacity: 1;
+   
+  
+  }

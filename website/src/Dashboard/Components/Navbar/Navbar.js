@@ -1,9 +1,7 @@
 
 import React from 'react';
 import { IconContext } from 'react-icons';
-import * as FaIcons from 'react-icons/fa';
 import { FcMenu } from "react-icons/fc";
-import Logo from '../../../logo.png';
 import CookieService from '../../Service/CookieService.js';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';

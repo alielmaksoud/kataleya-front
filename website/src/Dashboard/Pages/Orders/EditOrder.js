@@ -60,7 +60,6 @@ const useStyless = makeStyles((themee) => ({
 
 
 const EditOrder = (props) => {
-  const { register} = useForm();
   const cookie = CookieService.get('Bearer');
   let history = useHistory();
   const NewOrderclass = useStyless();

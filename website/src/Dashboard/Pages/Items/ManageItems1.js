@@ -17,14 +17,14 @@ import { green } from '@material-ui/core/colors';
 import { blue } from '@material-ui/core/colors';
 
 function ManageItem() {
-  const { register , handleSubmit, reset } = useForm();
+  const { register , handleSubmit } = useForm();
   const [DollarRate, setDollarRate] = useState(0)
   const [Items, setItems] = useState([])
   const [Loading, setLoading] = useState(true)
   const [Editing, setEditing] = useState(false)
   const [ItemData, setItemData] = useState({})
-  const [display, setdisplay] = useState({display: 'None', color: 'red' });
-  const [message, setmessage] = useState("none");
+  const [display] = useState({display: 'None', color: 'red' });
+  const [message] = useState("none");
     const useStyles = makeStyles((theme) => ({
       formm: {
         width: '100%', // Fix IE 11 issue.
@@ -89,7 +89,8 @@ function ManageItem() {
        };
        axios(`http://localhost:8000/api/admin/usdRate/${id}?_method=PUT`, headers)
       .then(res => {
-          setDollarRate(data.rate)
+          setDollarRate(res.data.rate)
+          window.location.replace("/admin/Manageitems")
     }).catch(err => {
       console.log(err.request)
     })
@@ -113,6 +114,7 @@ function ManageItem() {
             console.log(err.request)
           })
     },[]);
+    console.log(Items)
     const DeleteItem = async (id) => {
       var config = {
       method: 'Delete',

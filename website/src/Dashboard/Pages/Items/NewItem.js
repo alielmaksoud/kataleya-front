@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -120,13 +117,13 @@ function NewItem() {
     console.log(data,"data")
     const fd = new FormData();
     for (const [key, value] of Object.entries(data)) {
-      if(`${key}` == 'file'){
+      if(`${key}` === 'file'){
         fd.append('image', data.file[0])
       }
-      else if(`${key}` == 'is_offer' ){
+      else if(`${key}`=== 'is_offer' ){
         data.is_offer ? fd.append('is_offer', 1) :  fd.append('is_offer', 0)
       }
-      else if (`${key}` == 'is_featured'){
+      else if (`${key}`=== 'is_featured'){
         data.is_featured ? fd.append('is_featured', 1) :  fd.append('is_featured', 0)
       }
         else fd.append(`${key}`, `${value}`)
@@ -145,6 +142,7 @@ function NewItem() {
     setmessage(data.name + " has been added")
     setdisplay({display: 'inline', color: 'green' })
     reset();
+    window.location.replace("/admin/Newitem")
    })
   .catch((error) => {
     console.log(error)
@@ -159,10 +157,10 @@ function NewItem() {
   })
 }
 const handleChangeOffer = (event) => {
-  IsOffer == 1 ? setIsOffer(0) : setIsOffer(1)
+  IsOffer === 1 ? setIsOffer(0) : setIsOffer(1)
 };
 const handleChangeFeatured = (event) => {
-  IsFeatured == 1 ? setIsFeatured(0) : setIsFeatured(1)
+  IsFeatured === 1 ? setIsFeatured(0) : setIsFeatured(1)
 };
 
  if(Loading) {

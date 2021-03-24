@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState,useEffect}from 'react';
 import { IconContext } from 'react-icons';
 import * as FaIcons from 'react-icons/fa';
 import { FcMenu } from "react-icons/fc";
@@ -18,7 +18,7 @@ import Account from '../Account/Account';
 export default function Profile() {
 
   const av = CookieService.get('av');
-      
+  
   function logout(){
     const cookie = CookieService.get('Bearer');
     var config = {
@@ -39,10 +39,12 @@ export default function Profile() {
            CookieService.remove('Bearer');
            CookieService.remove('av');
            window.location.replace("/")
-
+          
         })
+        
 
   }
+  
     return (
         <div>
           
@@ -56,11 +58,8 @@ export default function Profile() {
             </Button>
           </div>
              <div class="flex-item-second">
-             <Cart />
+             <Cart  />
              <div>
-             <Button className="button-profile"  style={{ alignSelf:"center", width:"30%", color:"black", backgroundColor:"lightgray" }} edge="start" aria-label="menu" aria-haspopup="true" /* onClick={() => ()} */>
-             Checkout
-             </Button>
              </div>
              <br></br>
              <div>

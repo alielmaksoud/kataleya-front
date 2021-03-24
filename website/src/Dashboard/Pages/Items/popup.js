@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ComplexGrid(props) {
-  let { id, image, name, description,is_featured, is_offer,item_attributes} = props.details
+  let { image, name, description,is_featured, is_offer,item_attributes} = props.details
   let {rate}= props
  console.log(image,'image')
   const classes = useStyles();

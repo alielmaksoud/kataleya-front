@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import { Button, Menu, MenuItem} from '@material-ui/core';
 import CookieService from '../../Service/CookieService';
 import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import EditOrder from './EditOrder';
 import Status from './Status';
+import UserPopup from "./UserPopup"
 import axios from 'axios';
-import { IconButton } from "@material-ui/core"
+import { IconButton } from "@material-ui/core";
+import Popup from 'reactjs-popup';
 
 
 const Orders = () => {
@@ -166,7 +167,17 @@ const Orders = () => {
         },
         { field: 'order_date', headerName: 'Ordered At' , width: 170 },
         { field: 'shipped_date', headerName: 'Expected Arrival' , width: 170 },
-        { field: 'address', headerName: 'Address' , width: 170 },
+        {
+          field: 'customer',
+          headerName: 'Customer',
+          width: 170,
+          renderCell: (params) => (
+          
+              <Popup trigger={<Button variant="contained" size="small" alt="Remy Sharp">View</Button>} modal nested position="right center">
+              <UserPopup details={params.row} />
+            </Popup>
+          ),
+        },
         {
           field:'status_id',
           headerName: 'Status',

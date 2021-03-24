@@ -1,5 +1,5 @@
-import React, { Component, Fragment, useState } from 'react';
-import { Switch, Route, Redirect, withRouter,  Link } from 'react-router-dom';
+import React, {  Fragment} from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 
 // COMPONENTS

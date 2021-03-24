@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 function EditItem(props) {
-  const { register , handleSubmit, reset } = useForm();
+  const { register , handleSubmit } = useForm();
   const cookie = CookieService.get('Bearer');
   const classes = useStyles();
   const [display, setdisplay] = useState({display: 'None', color: 'red' });
@@ -105,13 +105,13 @@ function EditItem(props) {
     console.log(data,"data")
     const fd = new FormData();
     for (const [key, value] of Object.entries(data)) {
-      if(`${key}` == 'file'){
+      if(`${key}` === 'file'){
         fd.append('image', data.file[0])
       }
-      else if(`${key}` == 'is_offer' ){
+      else if(`${key}` === 'is_offer' ){
         data.is_offer ? fd.append('is_offer', 1) :  fd.append('is_offer', 0)
       }
-      else if (`${key}` == 'is_featured'){
+      else if (`${key}` === 'is_featured'){
         data.is_featured ? fd.append('is_featured', 1) :  fd.append('is_featured', 0)
       }
         else fd.append(`${key}`, `${value}`)
@@ -145,10 +145,10 @@ function EditItem(props) {
   })
 }
 const handleChangeOffer = (event) => {
-  IsOffer == 1 ? setIsOffer(0) : setIsOffer(1)
+  IsOffer === 1 ? setIsOffer(0) : setIsOffer(1)
 };
 const handleChangeFeatured = (event) => {
-  IsFeatured == 1 ? setIsFeatured(0) : setIsFeatured(1)
+  IsFeatured === 1 ? setIsFeatured(0) : setIsFeatured(1)
 };
 
  if(Loading) {

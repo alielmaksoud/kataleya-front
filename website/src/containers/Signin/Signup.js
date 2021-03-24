@@ -108,12 +108,13 @@ function Signup(props) {
       name: data.name,
       phone: data.phone,
       email: data.email,
-      password: data.password
+      password: data.password,
+      address:data.address
       
     })
     .then(res => {
-      CookieService.set('Bearer ', res.data.access_token, { path: "/", 'max-Age': res.data.expires_in})
-      CookieService.set('av ', res.data.av, { path: "/", 'max-Age': res.data.expires_in})
+      CookieService.set('Bearer ', res.data.access_token, { path: "/home", 'max-Age': res.data.expires_in})
+      CookieService.set('av ', res.data.av, { path: "/home", 'max-Age': res.data.expires_in})
       history.push("/profile");
       window.location.replace("/signin");
     })
@@ -184,6 +185,18 @@ function Signup(props) {
             label="Phone Number"
             type="phone"
             name="phone"
+            inputRef={register}
+          />
+           <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="address"
+            label="address"
+            type="address"
+            id="address"
+            autoComplete="current-address"
             inputRef={register}
           />
           <TextField

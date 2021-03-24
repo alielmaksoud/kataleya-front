@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import { Button } from '@material-ui/core';
 import CookieService from '../../Service/CookieService';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -70,7 +69,6 @@ function ManageAdmin() {
             console.log(err.request)
           })
     },[]);
-    console.log(Admins)
     const DeleteAdmin = async (id) => {
         setLoading(true);
  

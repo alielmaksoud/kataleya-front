@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import { Button } from '@material-ui/core';
 import CookieService from '../../Service/CookieService';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -14,7 +13,6 @@ const ManageMessages = () => {
     const [Messages, setMessages] = useState([])
     const [Loading, setLoading] = useState(true)
     const [Editing, setEditing] = useState(false)
-    const [TestimonialData, setTestimonialData] = useState({})
     const [display, setdisplay] = useState({display: 'None', color: 'red' });
     const [message, setmessage] = useState("none");
       const useStyles = makeStyles((theme) => ({
